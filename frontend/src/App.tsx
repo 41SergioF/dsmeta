@@ -1,12 +1,14 @@
-import NotificationButton from "./components/NotificationButton "
+import Header from "./components/Header";
+import NotificationButton from "./components/NotificationButton ";
 
 function App() {
   return (
-   <>
-    <h1>Olá mundo</h1>
-    <NotificationButton/>
-   </>
-  )
+    <>
+      <Header />
+      <NotificationButton />
+      <p>sa</p>
+    </>
+  );
 }
 
-export default App
+export default App;
