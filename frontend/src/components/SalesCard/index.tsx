@@ -21,13 +21,11 @@ function SalesCard() {
     const dmin = minDate.toISOString().slice(0, 10);
     const dmax = maxDate.toISOString().slice(0, 10);
 
-    axios(`${BASE_URL}/sales?minDate=${dmin}&maxDate=${dmax}`)
-    //get()`${BASE_URL}/sales?minDate=${dmin}&maxDate=${dmax}`)
-      .then((response) => {
+    axios(`${BASE_URL}/sales?minDate=${dmin}&maxDate=${dmax}`).then(
+      (response) => {
         setSales(response.data.content);
-        console.log("return server: ",response.data.content);
-        console.log("sales: ", sales.length)
-      });
+      }
+    );
   }, [minDate, maxDate]);
 
   return (
@@ -74,12 +72,12 @@ function SalesCard() {
                     {new Date(sale.date).toLocaleDateString()}
                   </td>
                   <td>{sale.sellerName}</td>
-                  <td className="show992">{sale.deals}.</td>
                   <td className="show992">{sale.visited}</td>
+                  <td className="show992">{sale.deals}</td>
                   <td>R$ {sale.amount.toFixed(2)}</td>
                   <td>
                     <div className="dsmeta-red-btn-container">
-                      <NotificationButton saleId={sale.id}/>
+                      <NotificationButton saleId={sale.id} />
                     </div>
                   </td>
                 </tr>
