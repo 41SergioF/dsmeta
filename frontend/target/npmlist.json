@@ -1,0 +1,1 @@
+{"version":"0.0.0","name":"frontend","dependencies":{"@types/react-datepicker":{"version":"4.4.2"},"axios":{"version":"0.27.2"},"react-datepicker":{"version":"4.8.0"},"react-dom":{"version":"18.2.0"},"react-toastify":{"version":"9.0.5"},"react":{"version":"18.2.0"}}}
